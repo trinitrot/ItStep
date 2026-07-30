@@ -17,7 +17,6 @@ def find_min_max(int_list):
 # print(find_min_max([654, 987, 6, 5]))
 
 
-
 # დავალება 2
 
 def calculate(data, operation):
@@ -48,7 +47,6 @@ def calculate(data, operation):
         return mult
 
 # print(calculate([]))
-
 
 
 # დავალება 3

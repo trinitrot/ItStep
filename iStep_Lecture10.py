@@ -14,13 +14,11 @@ def sum_of_digits(n):
 print(sum_of_digits(0))
 
 
-
 # დავალება 2
 
 is_even = lambda n: n % 2 == 0
 
 print(is_even(456))
-
 
 
 # დავალება 3
@@ -32,7 +30,6 @@ students_sorted = sorted(students, key=lambda x: (x[1], x[2]))
 print(students_sorted)
 
 
-
 # დავალება 4
 
 words = ["banana", "apple", "kiwi", "watermelon", "cherry"]
@@ -42,13 +39,11 @@ words_sorted = sorted(words, key=lambda x: len(x), reverse=True)
 print(words_sorted)
 
 
-
 # დავალება 5
 
 words_upper = list(map(lambda x: x[0].upper() + x[1:], words))
 
 print(words_upper)
-
 
 
 # დავალება 6

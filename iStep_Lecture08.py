@@ -11,18 +11,22 @@ for fruit in initial_list:
 
 print(fruit_counter_dict)
 
+
 # დავალება 2
 
-dict1 = {"ვაშლი" : 17, "მსხალი" : 98 , "ატამი" : 987}
-dict2 = {"ვაშლი" : 987, "ატამი" : 65, "ბანანი" : 84,"ქლიავი" : 98}
+dict1 = {"ვაშლი": 17, "მსხალი": 98 , "ატამი": 987}
+dict2 = {"ვაშლი": 987, "ატამი": 65, "ბანანი": 84, "ქლიავი": 98}
+
+dict3 = dict1.copy()
 
 for fruit in dict2:
-    if fruit in dict1:
-        dict1[fruit] = [dict1[fruit], dict2[fruit]]
+    if fruit in dict3:
+        dict3[fruit] = [dict3[fruit], dict2[fruit]]
     else:
-        dict1[fruit] = dict2[fruit]
+        dict3[fruit] = dict2[fruit]
 
-print(dict1)
+print(dict3)
+
 
 # დავალება 3
 
