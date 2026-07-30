@@ -14,7 +14,7 @@ print(fruit_counter_dict)
 
 # დავალება 2
 
-dict1 = {"ვაშლი": 17, "მსხალი": 98 , "ატამი": 987}
+dict1 = {"ვაშლი": 17, "მსხალი": 98, "ატამი": 987}
 dict2 = {"ვაშლი": 987, "ატამი": 65, "ბანანი": 84, "ქლიავი": 98}
 
 dict3 = dict1.copy()
@@ -33,7 +33,7 @@ print(dict3)
 films1 = {"Inception", "Interstellar", "Joker", "The Matrix", "Dune", "Oppenheimer"}
 films2 = {"Joker", "The Matrix", "Parasite", "Interstellar", "The Shawshank Redemption", "Dune"}
 
-print(films1 & films2)
-print(films1 - films2)
-print(films2 - films1)
-print(films1 | films2)
+print("საერთო ", films1 & films2)
+print("მხოლოდ პირველის ", films1 - films2)
+print("მხოლოდ მეორის ", films2 - films1)
+print("ორივესი ", films1 | films2)

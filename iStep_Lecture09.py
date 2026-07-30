@@ -1,18 +1,17 @@
 # დავალება 1
 
 def find_min_max(int_list):
-    if type(int_list) != list:
-        return "the function accepts only lists"
+    minimum = int_list[0]
+    maximum = int_list[0]
 
-    if len(int_list) == 0:
-        return "the function does not accept empty lists"
+    for n in int_list:
+        if n < minimum:
+            minimum = n
 
-    for i in int_list:
-        if type(i) != int:
-            return "the function accepts only a list of ints"
+        if n > maximum:
+            maximum = n
 
-    sorted_list = sorted(int_list)
-    return sorted_list[0], sorted_list[-1]
+    return minimum, maximum
 
 # print(find_min_max([654, 987, 6, 5]))
 
@@ -20,47 +19,55 @@ def find_min_max(int_list):
 # დავალება 2
 
 def calculate(data, operation):
-    if type(data) != list:
-        return "the function accepts only lists"
-
-    if len(data) == 0:
-        return "the function does not accept empty lists"
-
-    for i in data:
-        if type(i) not in (int, float):
-            return "the function accepts only a list  of numbers"
-
     if operation not in ("sum", "max", "min", "mult"):
         return 'Function accepts only "sum", "max", "min", "mult" as operation'
-    elif operation == "sum":
-        return sum(data)
-    elif operation == "max":
-        return max(data)
-    elif operation == "min":
-        return min(data)
-    else:
-        mult = 1
 
-        for i in data:
-            mult *= i
+    if operation == "sum":
+        total = 0
 
-        return mult
+        for n in data:
+            total += n
 
-# print(calculate([]))
+        return total
+
+    if operation == "min":
+        minimum = data[0]
+
+        for n in data:
+            if n < minimum:
+                minimum = n
+
+        return minimum
+
+    if operation == "max":
+        maximum = data[0]
+
+        for n in data:
+            if n > maximum:
+                maximum = n
+
+        return maximum
+
+    if operation == "mult":
+        multiplication = 1
+
+        for n in data:
+            multiplication *= n
+
+        return multiplication
+
+# print(calculate([2, 3, 6], "sum"))
 
 
 # დავალება 3
 
 def safe_divide(a, b):
-    try:
-        a = float(a)
-        b = float(b)
-    except ValueError, TypeError:
-        return "function accepts only numbers"
+    if type(a) != int or type(b) != int:
+        return "function accepts only integers"
 
     if b == 0:
         return "Cannot divide by zero"
 
     return a // b, a % b
 
-# print(safe_divide(45, 0))
+# print(safe_divide(45, 0.3))

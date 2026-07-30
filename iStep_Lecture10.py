@@ -1,7 +1,7 @@
 # დავალება 1
 
 def sum_of_digits(n):
-    if type(n) is not int :
+    if type(n) is not int:
         raise TypeError("function accepts only integers")
     elif n < 0:
         raise ValueError("function does not accept negative numbers")
@@ -11,7 +11,7 @@ def sum_of_digits(n):
 
     return n % 10 + sum_of_digits(n // 10)
 
-print(sum_of_digits(0))
+# print(sum_of_digits(012345))
 
 
 # დავალება 2
