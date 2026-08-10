@@ -16,5 +16,5 @@ while True:
     if text == "exit":
         break
 
-    with open("journal.txt","a") as file:
+    with open("journal.txt","a", encoding = "utf_8") as file:
         file.write(text + "\n")
