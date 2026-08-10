@@ -3,9 +3,9 @@
 with open("data.txt","r") as file:
     text = file.read()
 
-print(f"სტრიქონები {len(text.split('\n'))}")
-print(f"სიტყვები {len(text.split())}")
-print(f"სიმოლოები {len(text)}")
+print(f"{len(text.split('\n'))} სტრიქონი")
+print(f"{len(text.split())} სიტყვა")
+print(f"{len(text)} სიმბოლო")
 
 
 # დავალება 2
