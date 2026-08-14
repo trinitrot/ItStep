@@ -62,7 +62,6 @@ class BankAccount:
         print(f"Bank name: {self.bank_name}; Owner name: {self.owner}; Balance: {self.balance}")
 
 
-
 # bank_account1 = BankAccount("Albert", 5000)
 #
 # bank_account1.deposit(500)
