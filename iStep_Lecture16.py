@@ -63,7 +63,7 @@ class BankAccount:
 
 
 
-# bank_account1 = BankAccount("Many", 5000)
+# bank_account1 = BankAccount("Albert", 5000)
 #
 # bank_account1.deposit(500)
 # print(bank_account1.balance)
