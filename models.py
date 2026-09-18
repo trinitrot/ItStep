@@ -6,7 +6,7 @@ class Task:
         self.title = title
         self.description = description
         self.due_date = due_date
-        self.__priority = priority
+        self.change_priority(priority)
         self.__status = "pending"
 
     @property
