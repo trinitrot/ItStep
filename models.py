@@ -1,11 +1,19 @@
-class Task:
+from decorators import check_value
+
+class BaseTask:
+    def __init__ (self, title, description,due_date):
+        self.title = title
+        self.description = description
+        self.due_date = due_date
+
+
+class Task(BaseTask):
     ALLOWED_STATUSES = ("pending", "in-progress", "completed")
     ALLOWED_PRIORITIES = ("low", "medium", "high")
 
     def __init__ (self, title, description, due_date, priority):
-        self.title = title
-        self.description = description
-        self.due_date = due_date
+        super().__init__(title, description,due_date)
+
         self.change_priority(priority)
         self.__status = "pending"
 
@@ -17,16 +25,12 @@ class Task:
     def priority(self):
         return self.__priority
 
+    @check_value(ALLOWED_STATUSES)
     def change_status(self, new_status):
-        if new_status not in Task.ALLOWED_STATUSES:
-            raise ValueError("დასაშვებია მხოლოდ სტატუსები: 'pending', 'in-progress', 'completed'")
-
         self.__status = new_status
 
+    @check_value(ALLOWED_PRIORITIES)
     def change_priority(self, new_priority):
-        if new_priority not in Task.ALLOWED_PRIORITIES:
-            raise ValueError("დასაშვებია მხოლოდ შემდეგი პიორიტეტების მითითება: 'low', 'medium', 'high'")
-
         self.__priority = new_priority
 
     def edit(self, title=None, description=None, due_date=None):

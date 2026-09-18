@@ -186,3 +186,6 @@ while True:
         save_data(projects)
         print("Saved")
         break
+
+    else:
+        print("Invalid option")
