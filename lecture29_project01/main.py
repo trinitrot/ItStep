@@ -27,14 +27,14 @@ while True:
         for project in projects:
             print(project.name)
 
-        for task in project.tasks:
-            print(
-                f"Title: {task.title}, "
-                f"Description: {task.description}, "
-                f"Due Date: {task.due_date}, "
-                f"Priority: {task.priority}, "
-                f"Status: {task.status}"
-            )
+            for task in project.tasks:
+                print(
+                    f"Title: {task.title}, "
+                    f"Description: {task.description}, "
+                    f"Due Date: {task.due_date}, "
+                    f"Priority: {task.priority}, "
+                    f"Status: {task.status}"
+                )
 
     elif choice == "3":
         project_name = input("Project name: ")
@@ -171,7 +171,7 @@ while True:
         for project in projects:
             task = project.find_task(title)
 
-            if found_task is not None:
+            if task is not None:
                 found_project = project
                 found_task = task
                 break
